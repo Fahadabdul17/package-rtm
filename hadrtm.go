@@ -16,12 +16,12 @@ func InsertOneDoc(db *mongo.Database, collection string, doc interface{}) (inser
 	return insertResult.InsertedID
 }
 func InsertDatagrapic(db *mongo.Database, pendapatan, laba string, keuntungan string, kerugian string) (InsertedID interface{}) {
-	var  grapickinerjkeuangan grapic
-	grapickinerjkeuangan.Pendapatan = pendapatan
-	grapickinerjkeuangan.Laba = laba
-	grapickinerjkeuangan.Keuntungan = keuntungan
-	grapickinerjkeuangan.Kerugian = kerugian
-	return InsertOneDoc(db, "grapic", grapickinerjkeuangan)
+	var  gp grapic
+	gp.Pendapatan = pendapatan
+	gp.Laba = laba
+	gp.Keuntungan = keuntungan
+	gp.Kerugian = kerugian
+	return InsertOneDoc(db, "grapic", gp)
 }
 
 func GetDataPendapatan(pendapatan string, db *mongo.Database, col string) (data grapic) {
