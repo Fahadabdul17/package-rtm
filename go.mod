@@ -1,4 +1,4 @@
-module github.com/fahadabdul17/packagertm
+module github.com/fahadabdul17/package-rtm
 
 go 1.20
 
